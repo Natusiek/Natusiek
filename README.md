@@ -10,16 +10,21 @@ class Profile extends StatelessWidget {
         ClipOval(
           child: Image.asset("assets/profile/avatar.png"),
         ),
+        // NOTE: Basic information
         const ProfileInfoText(title: "Name:", description: "Alan Pypno"),
         const ProfileInfoText(title: "Location:", description: "Poland, Cracow"),
+        // NOTE: Experience
         const ProfileInfoText(title: "Experience:", description: "3 years"),
         const ProfileInfoText(title: "Languages:", description: "Dart, Kotlin"),
+        // NOTE: Portfolio
         const ProfileInfoText(
             title: "Linkedin:",
             description: "www.linkedin.com/in/alan-pypno-14b795278"),
         const ProfileInfoText(
             title: "Github:",
             description: "www.github.com/Natusiek"),
+
+        // TODO: Implement the application I'm working on and establish a startup
       ]),
     );
   }
