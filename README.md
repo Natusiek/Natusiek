@@ -23,6 +23,7 @@ class Profile extends StatelessWidget {
       ]),
     );
   }
+
 }
 
 class ProfileInfoText extends StatelessWidget {
@@ -36,19 +37,17 @@ class ProfileInfoText extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Text(
-          title,
-          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 10),
-          child: Text(description),
-        )
-      ],
-    );
+    return Row(mainAxisSize: MainAxisSize.min, children: [
+      Text(
+        title,
+        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: Text(description),
+      )
+    ]);
   }
+
 }
 ```
