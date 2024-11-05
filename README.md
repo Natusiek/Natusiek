@@ -1,16 +1,54 @@
-## Hi there 👋
+```dart
+import 'package:flutter/material.dart';
 
-<!--
-**Natusiek/Natusiek** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+class Profile extends StatelessWidget {
 
-Here are some ideas to get you started:
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        ClipOval(
+          child: Image.asset("assets/profile/avatar.png"),
+        ),
+        const ProfileInfoText(title: "Name:", description: "Alan Pypno"),
+        const ProfileInfoText(title: "Location:", description: "Poland, Cracow"),
+        const ProfileInfoText(title: "Experience:", description: "3 years"),
+        const ProfileInfoText(title: "Languages:", description: "Dart, Kotlin"),
+        const ProfileInfoText(
+            title: "Linkedin:",
+            description: "www.linkedin.com/in/alan-pypno-14b795278"),
+        const ProfileInfoText(
+            title: "Github:",
+            description: "www.github.com/Natusiek"),
+      ]),
+    );
+  }
+}
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+class ProfileInfoText extends StatelessWidget {
+  final String title;
+  final String description;
+
+  const ProfileInfoText({
+    required this.title,
+    required this.description,
+  });
+  
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          title,
+          style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: Text(description),
+        )
+      ],
+    );
+  }
+}
+```
