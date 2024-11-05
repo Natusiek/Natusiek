@@ -13,6 +13,7 @@ class Profile extends StatelessWidget {
         // NOTE: Basic information
         const ProfileInfoText(title: "Name:", description: "Alan Pypno"),
         const ProfileInfoText(title: "Location:", description: "Poland, Cracow"),
+        const ProfileInfoText(title: "Email:", description: "alanpypno@gmail.com"),
         // NOTE: Experience
         const ProfileInfoText(title: "Experience:", description: "3 years"),
         const ProfileInfoText(title: "Languages:", description: "Dart, Kotlin"),
