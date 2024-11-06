@@ -11,19 +11,19 @@ class Profile extends StatelessWidget {
           child: Image.asset("assets/profile/avatar.png"),
         ),
         // NOTE: Basic information
-        const ProfileInfo(title: "Name:", description: "Alan Pypno"),
-        const ProfileInfo(title: "Location:", description: "Poland, Cracow"),
-        const ProfileInfo(title: "Email:", description: "alanpypno@gmail.com"),
+        const ProfileInfo(title: "Name:", label: "Alan Pypno"),
+        const ProfileInfo(title: "Location:", label: "Poland, Cracow"),
+        const ProfileInfo(title: "Email:", label: "alanpypno@gmail.com"),
         // NOTE: Experience
-        const ProfileInfo(title: "Experience:", description: "3 years"),
-        const ProfileInfo(title: "Languages:", description: "Dart, Kotlin"),
+        const ProfileInfo(title: "Experience:", label: "3 years"),
+        const ProfileInfo(title: "Languages:", label: "Dart, Kotlin"),
         // NOTE: Portfolio
         const ProfileInfo(
             title: "Linkedin:",
-            description: "www.linkedin.com/in/alan-pypno-14b795278"),
+            label: "www.linkedin.com/in/alan-pypno-14b795278"),
         const ProfileInfo(
             title: "Github:",
-            description: "www.github.com/Natusiek"),
+            label: "www.github.com/Natusiek"),
 
         // TODO: Implement the application I'm working on and establish a startup
       ]),
@@ -34,11 +34,11 @@ class Profile extends StatelessWidget {
 
 class ProfileInfo extends StatelessWidget {
   final String title;
-  final String description;
+  final String label;
 
   const ProfileInfo({
     required this.title,
-    required this.description,
+    required this.label,
   });
   
   @override
@@ -50,7 +50,7 @@ class ProfileInfo extends StatelessWidget {
       ),
       Padding(
         padding: const EdgeInsets.only(left: 10),
-        child: Text(description),
+        child: Text(label),
       )
     ]);
   }
