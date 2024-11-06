@@ -11,17 +11,17 @@ class Profile extends StatelessWidget {
           child: Image.asset("assets/profile/avatar.png"),
         ),
         // NOTE: Basic information
-        const ProfileInfoText(title: "Name:", description: "Alan Pypno"),
-        const ProfileInfoText(title: "Location:", description: "Poland, Cracow"),
-        const ProfileInfoText(title: "Email:", description: "alanpypno@gmail.com"),
+        const ProfileInfo(title: "Name:", description: "Alan Pypno"),
+        const ProfileInfo(title: "Location:", description: "Poland, Cracow"),
+        const ProfileInfo(title: "Email:", description: "alanpypno@gmail.com"),
         // NOTE: Experience
-        const ProfileInfoText(title: "Experience:", description: "3 years"),
-        const ProfileInfoText(title: "Languages:", description: "Dart, Kotlin"),
+        const ProfileInfo(title: "Experience:", description: "3 years"),
+        const ProfileInfo(title: "Languages:", description: "Dart, Kotlin"),
         // NOTE: Portfolio
-        const ProfileInfoText(
+        const ProfileInfo(
             title: "Linkedin:",
             description: "www.linkedin.com/in/alan-pypno-14b795278"),
-        const ProfileInfoText(
+        const ProfileInfo(
             title: "Github:",
             description: "www.github.com/Natusiek"),
 
@@ -32,11 +32,11 @@ class Profile extends StatelessWidget {
 
 }
 
-class ProfileInfoText extends StatelessWidget {
+class ProfileInfo extends StatelessWidget {
   final String title;
   final String description;
 
-  const ProfileInfoText({
+  const ProfileInfo({
     required this.title,
     required this.description,
   });
